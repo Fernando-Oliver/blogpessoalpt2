@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { error } from 'console';
-import {window} from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthService } from '../service/auth.service';
@@ -30,7 +28,7 @@ export class EntrarComponent implements OnInit {
     environment.nome = this.usuarioLogin.nome
     environment.foto = this.usuarioLogin.foto
     environment.id = this.usuarioLogin.id
-    this.usuarioLogin.foto
+    environment.tipo = this.usuarioLogin.tipo
   this.router.navigate(['/inicio'])
   }, 
   error: error =>{
