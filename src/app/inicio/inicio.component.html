@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-    <div class="row bg-secondary d-flex justify-content-center">
+    <div class="row bg-secondary d-flex align-items-center">
     <div class="col-md-6 ">
 
 <div class="row d-flex justify-content-center">
@@ -18,12 +18,12 @@
 
     </div>
     <div class="col-md-6 d-flex justify-content-center">
-            <img src="/src/assets/img/Group discussion-cuate.svg" alt="Grupo em discussão" width="500px" height="500px">
+            <img src="assets/img/Group discussion-cuate.png" alt="Grupo em discussão" width="500px" height="500px">
     </div>
 </div>
 </div>
 
-<div class="contaier mb-5 mt-5 id=postagens">
+<div class="contaier mb-5 mt-5" id=postagens>
 
     <nav>
         <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
@@ -56,25 +56,27 @@
                       <span arial-hidden="true">&times;</span>
                   </button>
               </div>
-            <div class="model-body">
+            
+              <div class="model-body">
                 <div class="form-group">
                     <label for="titulo">Titulo</label>
                     <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
-                  
-                    <div class="form-group">
+                </div>
+                    
+                <div class="form-group">
                        <label for="texto">Texto</label>
                     <textarea class="form-control" name="texto" id="texto"  rows="3"></textarea>
                    </div>
                     
                    <div class="form-group">
-                       <label for="texto">Escolha um tema ou <a href="">Cadastre um novo.</a>:</label>
-                   <select name="tema" id="tema" class="form-group">
+                       <label for="texto">Escolha um tema ou <a routerLink="/tema">Cadastre um novo.</a>:</label>
+                   <select name="tema" id="tema" class="form-control">
                     <option value="">Temas</option>
                    </select>
                    </div>
                 </div>
-            </div>
-            <div class="model-footer">
+            
+            <div class="model-footer" d-flex justify-content-center>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-success">Publicar</button>
             </div>
