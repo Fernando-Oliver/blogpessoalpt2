@@ -60,6 +60,8 @@
                      <small class="text-muted">Tema: {{tema.tema.descricao}}</small>
                      <p class="card-text mt-3">{{tema.texto}}</p>
                      <p class="card-text"><small class="text-muted"></small>{{tema.data | date: 'dd/MM/yyyy'}} às {{tema.data | date: 'HH:mm'}}</p>
+                     <a [routerLink]="['/postagem=edit', tema.id]" class="text-info mr-3" >Editar</a>
+                     <a [routerLink]="['/postagem-delete', tema.id]" class="text-danger" >Apagar</a>
                   </div>
                 </div>
              </div>
@@ -74,6 +76,7 @@
                      <p class="card-text mt-3">{{postagem.texto}}</p>
                      <p class="card-text"><small class="text-muted"></small>{{postagem.data | date: 'dd/MM/yyyy'}} às {{postagem.data | date: 'HH:mm'}}</p>
                      <p class="card-text"><small class="text-muted"></small>by: {{postagem.usuario.nome}}</p>
+
                   </div>
                 </div>
              </div>
@@ -107,7 +110,7 @@
                     
                    <div class="form-group">
                        <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">Cadastre um novo.</a>:</label>
-                   <select name="tema" id="tema" class="form-control" [(ngModel)]="idTema" (change)="findByIdTema">
+                   <select name="tema" id="tema" class="form-control" [(ngModel)]="idTema" (change)="findByIdTema()">
                     <option *ngFor="let tema of listaTemas" value="{{tema.id}}">{{tema.descricao}}</option>
                    </select>
                    </div>
